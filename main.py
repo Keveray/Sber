@@ -81,6 +81,6 @@ async def init_app():
 
 if __name__ == '__main__':
     start_http_server(PROMETHEUS_PORT)
-    logger.info(f"Сервер метрик Prometheus запущен на порту {PROMETHEUS_PORT}")
+    logger.info(f"Сервер метрик Prometheus запущен на порте {PROMETHEUS_PORT}")
     app = asyncio.run(init_app())
     web.run_app(app, host='localhost', port=8080)
