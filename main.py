@@ -19,8 +19,7 @@ REQUEST_DURATION = Histogram('http_request_duration_seconds', 'Длительн�
 es_client = None
 s3_client = None
 
-
-async def init_clients():
+async def init_clients(app):
     global es_client, s3_client
     es_client = AsyncElasticsearch([ES_HOST])
     s3_client = boto3.client('s3', region_name=S3_REGION)
